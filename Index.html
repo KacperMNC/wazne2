@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czy wyjdziesz za mnie?</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px #d32f2f;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin: 10px 0;
+            text-align: center;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .button {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #ffffff;
+            color: #d32f2f;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+            .button:hover {
+                transform: scale(1.1);
+                background-color: #fad0c4;
+            }
+
+        .heart {
+            font-size: 5rem;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px #d32f2f;
+            margin: 20px 0;
+            animation: heartBeat 1s infinite;
+        }
+
+        .fade-in {
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="glowna">
+        <h1>Czy spełnisz moje marzenie i zostaniesz moją żoną?</h1>
+        <p>Kocham Cię i nie wyobrażam sobie życia bez Ciebie ❤️</p>
+        <div class="align-center heart">❤️</div>
+        <div>
+
+
+            <button class="button align-center" style="margin-right:10px" onclick="showMessage()">TAK!</button>
+            <button class="button align-center" disabled>Nie :(</button>
+        </div>
+    </div>
+    <script>
+
+
+        function showMessage() {
+            document.getElementById("glowna").innerHTML = `
+                                <h1 class='fade-in'>TAAAAK ❤️</h1>
+                                <p class='fade-in'>Jestem najszczęśliwszym człowiekiem na świecie!</p>
+                                <div class="heart fade-in">💍</div>
+                            `;
+        }
+    </script>
+</body>
+</html>
